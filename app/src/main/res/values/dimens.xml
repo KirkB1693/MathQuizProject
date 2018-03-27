@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="hexagon_width">75dp</dimen>
+    <dimen name="hexagon_height">75dp</dimen>
+    <dimen name="hexagon_left_margin">16dp</dimen>
+    <dimen name="checkbox_width">30dp</dimen>
+    <dimen name="checkbox_height">30dp</dimen>
+    <dimen name="checkbox_left_margin">38dp</dimen>
+    <dimen name="checkbox_gap">85dp</dimen>
+    <dimen name="hexagon_gap">40dp</dimen>
+    <dimen name="hexagon_top_margin">30dp</dimen>
+    <dimen name="edit_text_margin">16dp</dimen>
+    <dimen name="score_button_margin">30dp</dimen>
+</resources>
