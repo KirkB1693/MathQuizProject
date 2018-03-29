@@ -5,8 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,10 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
 
-        }
+    }
 
     public void getScore(View view) {
         int rightAnswers = 0;
@@ -72,10 +70,15 @@ public class MainActivity extends AppCompatActivity {
             rightAnswer2 = 0;
         }
 
-        TextView question3Text = (TextView) findViewById(R.id.question3_text);
-        int question3Answer = Integer.parseInt(question3Text.getText().toString());
-        if (question3Answer == 198) {
-            rightAnswer3 = 1;
+        EditText question3Text = (EditText) findViewById(R.id.question3_text);
+
+        if (question3Text.getText().toString().isEmpty()) {
+            rightAnswer3 = 0;
+        } else {
+            int question3Answer = Integer.parseInt(question3Text.getText().toString());
+            if (question3Answer == 198) {
+                rightAnswer3 = 1;
+            }
         }
 
         RadioButton rb2 = (RadioButton) findViewById(R.id.radio_question4_answer3);
@@ -88,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void displayScore(int totalRightAnswers) {
+
         CharSequence text = getString(R.string.toast, totalRightAnswers, totalQuestions);
         int duration = Toast.LENGTH_SHORT;
 
